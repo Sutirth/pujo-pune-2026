@@ -1,0 +1,1176 @@
+{
+  "meta": {
+    "title": "Durga Puja in Pune 2026",
+    "year": 2026,
+    "full_map_url": "https://maps.app.goo.gl/2wamkrsnqvpAHktt7",
+    "compiled_by": "Arun Chakraborty (Raja)",
+    "initiative": "Bengalis in Pune",
+    "contacts": [
+      {
+        "name": "Arun (Raja)",
+        "phone": "9552162105"
+      },
+      {
+        "name": "Keya",
+        "phone": "8007318880"
+      },
+      {
+        "name": "Nitin",
+        "phone": "7276927516"
+      }
+    ]
+  },
+  "areas": [
+    {
+      "id": "east",
+      "name": "East Pune",
+      "count": 12
+    },
+    {
+      "id": "north",
+      "name": "North Pune (PCMC)",
+      "count": 14
+    },
+    {
+      "id": "central",
+      "name": "Central Pune",
+      "count": 4
+    },
+    {
+      "id": "west",
+      "name": "West Pune",
+      "count": 7
+    },
+    {
+      "id": "northeast",
+      "name": "North East Pune",
+      "count": 8
+    },
+    {
+      "id": "south",
+      "name": "South Pune",
+      "count": 4
+    },
+    {
+      "id": "city",
+      "name": "Pune City & Nearby",
+      "count": 5
+    },
+    {
+      "id": "southeast",
+      "name": "South East Pune",
+      "count": 7
+    },
+    {
+      "id": "southwest",
+      "name": "South West Pune",
+      "count": 8
+    }
+  ],
+  "pandals": [
+    {
+      "id": "east-01",
+      "area": "east",
+      "name": "Agradoot Bangosamaj",
+      "locality": "Kharadi",
+      "note": null,
+      "lat": null,
+      "lng": null,
+      "pos": [
+        18.553,
+        73.94
+      ],
+      "pos_exact": false,
+      "maps_query": "Agradoot Bangosamaj Kharadi Pune",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Agradoot+Bangosamaj+Kharadi+Pune"
+    },
+    {
+      "id": "east-02",
+      "area": "east",
+      "name": "Nabo Banga Samaj",
+      "locality": "Kharadi",
+      "note": null,
+      "lat": null,
+      "lng": null,
+      "pos": [
+        18.553,
+        73.94
+      ],
+      "pos_exact": false,
+      "maps_query": "Nabo Banga Samaj Kharadi Pune",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Nabo+Banga+Samaj+Kharadi+Pune"
+    },
+    {
+      "id": "east-03",
+      "area": "east",
+      "name": "Jagoron Bengali Association",
+      "locality": "Kharadi",
+      "note": null,
+      "lat": null,
+      "lng": null,
+      "pos": [
+        18.553,
+        73.94
+      ],
+      "pos_exact": false,
+      "maps_query": "Jagoron Bengali Association Kharadi Pune",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Jagoron+Bengali+Association+Kharadi+Pune"
+    },
+    {
+      "id": "east-04",
+      "area": "east",
+      "name": "Banga Bharti",
+      "locality": "Wadgaon Sheri",
+      "note": null,
+      "lat": null,
+      "lng": null,
+      "pos": [
+        18.5525,
+        73.9235
+      ],
+      "pos_exact": false,
+      "maps_query": "Banga Bharti Wadgaon Sheri Pune",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Banga+Bharti+Wadgaon+Sheri+Pune"
+    },
+    {
+      "id": "east-05",
+      "area": "east",
+      "name": "Abahan",
+      "locality": "Wadgaon Sheri",
+      "note": null,
+      "lat": null,
+      "lng": null,
+      "pos": [
+        18.5525,
+        73.9235
+      ],
+      "pos_exact": false,
+      "maps_query": "Abahan Wadgaon Sheri Pune",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Abahan+Wadgaon+Sheri+Pune"
+    },
+    {
+      "id": "east-06",
+      "area": "east",
+      "name": "Prangan Association",
+      "locality": "Wagholi",
+      "note": null,
+      "lat": null,
+      "lng": null,
+      "pos": [
+        18.58,
+        73.981
+      ],
+      "pos_exact": false,
+      "maps_query": "Prangan Association Wagholi Pune",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Prangan+Association+Wagholi+Pune"
+    },
+    {
+      "id": "east-07",
+      "area": "east",
+      "name": "Kashphool Durgotsav",
+      "locality": "Wagholi",
+      "note": null,
+      "lat": null,
+      "lng": null,
+      "pos": [
+        18.58,
+        73.981
+      ],
+      "pos_exact": false,
+      "maps_query": "Kashphool Durgotsav Wagholi Pune",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Kashphool+Durgotsav+Wagholi+Pune"
+    },
+    {
+      "id": "east-08",
+      "area": "east",
+      "name": "Nabo Bangiya Foundation",
+      "locality": "Wagholi",
+      "note": null,
+      "lat": null,
+      "lng": null,
+      "pos": [
+        18.58,
+        73.981
+      ],
+      "pos_exact": false,
+      "maps_query": "Nabo Bangiya Foundation Wagholi Pune",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Nabo+Bangiya+Foundation+Wagholi+Pune"
+    },
+    {
+      "id": "east-09",
+      "area": "east",
+      "name": "Anandamela (ABSS)",
+      "locality": "Wagholi",
+      "note": null,
+      "lat": null,
+      "lng": null,
+      "pos": [
+        18.58,
+        73.981
+      ],
+      "pos_exact": false,
+      "maps_query": "Anandamela (ABSS) Wagholi Pune",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Anandamela+%28ABSS%29+Wagholi+Pune"
+    },
+    {
+      "id": "east-10",
+      "area": "east",
+      "name": "Natun Diganta",
+      "locality": "Wagholi",
+      "note": null,
+      "lat": null,
+      "lng": null,
+      "pos": [
+        18.58,
+        73.981
+      ],
+      "pos_exact": false,
+      "maps_query": "Natun Diganta Wagholi Pune",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Natun+Diganta+Wagholi+Pune"
+    },
+    {
+      "id": "east-11",
+      "area": "east",
+      "name": "Utkal Banga Sharodiya Durgotsav",
+      "locality": "Wagholi",
+      "note": null,
+      "lat": null,
+      "lng": null,
+      "pos": [
+        18.58,
+        73.981
+      ],
+      "pos_exact": false,
+      "maps_query": "Utkal Banga Sharodiya Durgotsav Wagholi Pune",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Utkal+Banga+Sharodiya+Durgotsav+Wagholi+Pune"
+    },
+    {
+      "id": "east-12",
+      "area": "east",
+      "name": "Banga Bharti Trust, Khalsa Mangal Karyalaya",
+      "locality": "Wagholi",
+      "note": null,
+      "lat": null,
+      "lng": null,
+      "pos": [
+        18.58,
+        73.981
+      ],
+      "pos_exact": false,
+      "maps_query": "Banga Bharti Trust, Khalsa Mangal Karyalaya Wagholi Pune",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Banga+Bharti+Trust%2C+Khalsa+Mangal+Karyalaya+Wagholi+Pune"
+    },
+    {
+      "id": "north-01",
+      "area": "north",
+      "name": "Oikyotan Bangiya Parishad",
+      "locality": "Pimple Saudagar",
+      "note": null,
+      "lat": null,
+      "lng": null,
+      "pos": [
+        18.598,
+        73.802
+      ],
+      "pos_exact": false,
+      "maps_query": "Oikyotan Bangiya Parishad Pimple Saudagar Pune",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Oikyotan+Bangiya+Parishad+Pimple+Saudagar+Pune"
+    },
+    {
+      "id": "north-02",
+      "area": "north",
+      "name": "Naboshakti Bongo Sangha",
+      "locality": "Pimple Saudagar",
+      "note": null,
+      "lat": null,
+      "lng": null,
+      "pos": [
+        18.598,
+        73.802
+      ],
+      "pos_exact": false,
+      "maps_query": "Naboshakti Bongo Sangha Pimple Saudagar Pune",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Naboshakti+Bongo+Sangha+Pimple+Saudagar+Pune"
+    },
+    {
+      "id": "north-03",
+      "area": "north",
+      "name": "Amader Barir Pujo",
+      "locality": "Wakad",
+      "note": null,
+      "lat": null,
+      "lng": null,
+      "pos": [
+        18.599,
+        73.77
+      ],
+      "pos_exact": false,
+      "maps_query": "Amader Barir Pujo Wakad Pune",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Amader+Barir+Pujo+Wakad+Pune"
+    },
+    {
+      "id": "north-04",
+      "area": "north",
+      "name": "Bangiya Maitree Parishad",
+      "locality": "Pimple Gurav",
+      "note": null,
+      "lat": null,
+      "lng": null,
+      "pos": [
+        18.587,
+        73.815
+      ],
+      "pos_exact": false,
+      "maps_query": "Bangiya Maitree Parishad Pimple Gurav Pune",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Bangiya+Maitree+Parishad+Pimple+Gurav+Pune"
+    },
+    {
+      "id": "north-05",
+      "area": "north",
+      "name": "Hinjewadi Cultural Arena",
+      "locality": "Hinjewadi 1",
+      "note": null,
+      "lat": null,
+      "lng": null,
+      "pos": [
+        18.592,
+        73.739
+      ],
+      "pos_exact": false,
+      "maps_query": "Hinjewadi Cultural Arena Hinjewadi 1 Pune",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Hinjewadi+Cultural+Arena+Hinjewadi+1+Pune"
+    },
+    {
+      "id": "north-06",
+      "area": "north",
+      "name": "MHCA Phase 3",
+      "locality": "Hinjewadi 3",
+      "note": null,
+      "lat": null,
+      "lng": null,
+      "pos": [
+        18.584,
+        73.687
+      ],
+      "pos_exact": false,
+      "maps_query": "MHCA Phase 3 Hinjewadi 3 Pune",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=MHCA+Phase+3+Hinjewadi+3+Pune"
+    },
+    {
+      "id": "north-07",
+      "area": "north",
+      "name": "Bhoirwadi (BSA)",
+      "locality": "Hinjewadi 3",
+      "note": null,
+      "lat": null,
+      "lng": null,
+      "pos": [
+        18.584,
+        73.687
+      ],
+      "pos_exact": false,
+      "maps_query": "Bhoirwadi (BSA) Hinjewadi 3 Pune",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Bhoirwadi+%28BSA%29+Hinjewadi+3+Pune"
+    },
+    {
+      "id": "north-08",
+      "area": "north",
+      "name": "Oitijhyo (OSCA)",
+      "locality": "Hinjewadi 2",
+      "note": null,
+      "lat": null,
+      "lng": null,
+      "pos": [
+        18.588,
+        73.708
+      ],
+      "pos_exact": false,
+      "maps_query": "Oitijhyo (OSCA) Hinjewadi 2 Pune",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Oitijhyo+%28OSCA%29+Hinjewadi+2+Pune"
+    },
+    {
+      "id": "north-09",
+      "area": "north",
+      "name": "BKP, Dehu Road Kalibari",
+      "locality": "Dehu Road",
+      "note": null,
+      "lat": null,
+      "lng": null,
+      "pos": [
+        18.6767,
+        73.7368
+      ],
+      "pos_exact": false,
+      "maps_query": "BKP, Dehu Road Kalibari Dehu Road Pune",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=BKP%2C+Dehu+Road+Kalibari+Dehu+Road+Pune"
+    },
+    {
+      "id": "north-10",
+      "area": "north",
+      "name": "Anandadhara Prabasi Sanstha",
+      "locality": "Moshi",
+      "note": null,
+      "lat": null,
+      "lng": null,
+      "pos": [
+        18.67,
+        73.848
+      ],
+      "pos_exact": false,
+      "maps_query": "Anandadhara Prabasi Sanstha Moshi Pune",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Anandadhara+Prabasi+Sanstha+Moshi+Pune"
+    },
+    {
+      "id": "north-11",
+      "area": "north",
+      "name": "Geetanjali Sangho",
+      "locality": "Akurdi",
+      "note": null,
+      "lat": null,
+      "lng": null,
+      "pos": [
+        18.6476,
+        73.7727
+      ],
+      "pos_exact": false,
+      "maps_query": "Geetanjali Sangho Akurdi Pune",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Geetanjali+Sangho+Akurdi+Pune"
+    },
+    {
+      "id": "north-12",
+      "area": "north",
+      "name": "Banga Bharati",
+      "locality": "Pimpri",
+      "note": null,
+      "lat": null,
+      "lng": null,
+      "pos": [
+        18.6298,
+        73.7997
+      ],
+      "pos_exact": false,
+      "maps_query": "Banga Bharati Pimpri Pune",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Banga+Bharati+Pimpri+Pune"
+    },
+    {
+      "id": "north-13",
+      "area": "north",
+      "name": "Biswa Bharati Kalimata Mandir",
+      "locality": "Bhosari",
+      "note": null,
+      "lat": null,
+      "lng": null,
+      "pos": [
+        18.629,
+        73.846
+      ],
+      "pos_exact": false,
+      "maps_query": "Biswa Bharati Kalimata Mandir Bhosari Pune",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Biswa+Bharati+Kalimata+Mandir+Bhosari+Pune"
+    },
+    {
+      "id": "north-14",
+      "area": "north",
+      "name": "Sri Sri Maa Mahishasurmardini Mahamayee Pujo",
+      "locality": "Bhosari",
+      "note": null,
+      "lat": null,
+      "lng": null,
+      "pos": [
+        18.629,
+        73.846
+      ],
+      "pos_exact": false,
+      "maps_query": "Sri Sri Maa Mahishasurmardini Mahamayee Pujo Bhosari Pune",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Sri+Sri+Maa+Mahishasurmardini+Mahamayee+Pujo+Bhosari+Pune"
+    },
+    {
+      "id": "central-01",
+      "area": "central",
+      "name": "Poona City Sarbajanin Durga Utsav",
+      "locality": "Rasta Peth",
+      "note": null,
+      "lat": null,
+      "lng": null,
+      "pos": [
+        18.5185,
+        73.8665
+      ],
+      "pos_exact": false,
+      "maps_query": "Poona City Sarbajanin Durga Utsav Rasta Peth Pune",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Poona+City+Sarbajanin+Durga+Utsav+Rasta+Peth+Pune"
+    },
+    {
+      "id": "central-02",
+      "area": "central",
+      "name": "Swarnabhumi Seva Sangha",
+      "locality": "Somvar Peth",
+      "note": null,
+      "lat": null,
+      "lng": null,
+      "pos": [
+        18.523,
+        73.871
+      ],
+      "pos_exact": false,
+      "maps_query": "Swarnabhumi Seva Sangha Somvar Peth Pune",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Swarnabhumi+Seva+Sangha+Somvar+Peth+Pune"
+    },
+    {
+      "id": "central-03",
+      "area": "central",
+      "name": "Bangiya Sanskriti Samsad",
+      "locality": "Shivaji Nagar",
+      "note": null,
+      "lat": null,
+      "lng": null,
+      "pos": [
+        18.531,
+        73.846
+      ],
+      "pos_exact": false,
+      "maps_query": "Bangiya Sanskriti Samsad Shivaji Nagar Pune",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Bangiya+Sanskriti+Samsad+Shivaji+Nagar+Pune"
+    },
+    {
+      "id": "central-04",
+      "area": "central",
+      "name": "Pune Kalibari",
+      "locality": "Khadki",
+      "note": null,
+      "lat": null,
+      "lng": null,
+      "pos": [
+        18.564,
+        73.844
+      ],
+      "pos_exact": false,
+      "maps_query": "Pune Kalibari Khadki Pune",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Pune+Kalibari+Khadki+Pune"
+    },
+    {
+      "id": "west-01",
+      "area": "west",
+      "name": "Bengalee Association Pune (BAP)",
+      "locality": "Baner",
+      "note": null,
+      "lat": null,
+      "lng": null,
+      "pos": [
+        18.56,
+        73.787
+      ],
+      "pos_exact": false,
+      "maps_query": "Bengalee Association Pune (BAP) Baner Pune",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Bengalee+Association+Pune+%28BAP%29+Baner+Pune"
+    },
+    {
+      "id": "west-02",
+      "area": "west",
+      "name": "Paschim Pune Bangiya Parishad",
+      "locality": "Baner",
+      "note": null,
+      "lat": null,
+      "lng": null,
+      "pos": [
+        18.56,
+        73.787
+      ],
+      "pos_exact": false,
+      "maps_query": "Paschim Pune Bangiya Parishad Baner Pune",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Paschim+Pune+Bangiya+Parishad+Baner+Pune"
+    },
+    {
+      "id": "west-03",
+      "area": "west",
+      "name": "Trikaya Sanskritik Foundation",
+      "locality": "Baner",
+      "note": null,
+      "lat": null,
+      "lng": null,
+      "pos": [
+        18.56,
+        73.787
+      ],
+      "pos_exact": false,
+      "maps_query": "Trikaya Sanskritik Foundation Baner Pune",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Trikaya+Sanskritik+Foundation+Baner+Pune"
+    },
+    {
+      "id": "west-04",
+      "area": "west",
+      "name": "Saptapadi (SCSA)",
+      "locality": "Balewadi",
+      "note": null,
+      "lat": null,
+      "lng": null,
+      "pos": [
+        18.577,
+        73.777
+      ],
+      "pos_exact": false,
+      "maps_query": "Saptapadi (SCSA) Balewadi Pune",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Saptapadi+%28SCSA%29+Balewadi+Pune"
+    },
+    {
+      "id": "west-05",
+      "area": "west",
+      "name": "Amra Sobai Bangali Sangho",
+      "locality": "Pashan",
+      "note": null,
+      "lat": null,
+      "lng": null,
+      "pos": [
+        18.537,
+        73.794
+      ],
+      "pos_exact": false,
+      "maps_query": "Amra Sobai Bangali Sangho Pashan Pune",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Amra+Sobai+Bangali+Sangho+Pashan+Pune"
+    },
+    {
+      "id": "west-06",
+      "area": "west",
+      "name": "Aagomoni Prabasi Sangha",
+      "locality": "Pashan",
+      "note": null,
+      "lat": null,
+      "lng": null,
+      "pos": [
+        18.537,
+        73.794
+      ],
+      "pos_exact": false,
+      "maps_query": "Aagomoni Prabasi Sangha Pashan Pune",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Aagomoni+Prabasi+Sangha+Pashan+Pune"
+    },
+    {
+      "id": "west-07",
+      "area": "west",
+      "name": "Sanatan Sanskrutik Trust",
+      "locality": "Bhukum",
+      "note": null,
+      "lat": null,
+      "lng": null,
+      "pos": [
+        18.512,
+        73.742
+      ],
+      "pos_exact": false,
+      "maps_query": "Sanatan Sanskrutik Trust Bhukum Pune",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Sanatan+Sanskrutik+Trust+Bhukum+Pune"
+    },
+    {
+      "id": "northeast-01",
+      "area": "northeast",
+      "name": "Jagriti Cultural Foundation",
+      "locality": "Charholi",
+      "note": null,
+      "lat": null,
+      "lng": null,
+      "pos": [
+        18.6235,
+        73.8955
+      ],
+      "pos_exact": false,
+      "maps_query": "Jagriti Cultural Foundation Charholi Pune",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Jagriti+Cultural+Foundation+Charholi+Pune"
+    },
+    {
+      "id": "northeast-02",
+      "area": "northeast",
+      "name": "SSD, Dhanori",
+      "locality": "Dhanori",
+      "note": null,
+      "lat": null,
+      "lng": null,
+      "pos": [
+        18.593,
+        73.899
+      ],
+      "pos_exact": false,
+      "maps_query": "SSD, Dhanori Dhanori Pune",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=SSD%2C+Dhanori+Dhanori+Pune"
+    },
+    {
+      "id": "northeast-03",
+      "area": "northeast",
+      "name": "Navodaya Cultural Association",
+      "locality": "Dhanori",
+      "note": null,
+      "lat": null,
+      "lng": null,
+      "pos": [
+        18.593,
+        73.899
+      ],
+      "pos_exact": false,
+      "maps_query": "Navodaya Cultural Association Dhanori Pune",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Navodaya+Cultural+Association+Dhanori+Pune"
+    },
+    {
+      "id": "northeast-04",
+      "area": "northeast",
+      "name": "PNBS",
+      "locality": "Vishrantwadi",
+      "note": null,
+      "lat": null,
+      "lng": null,
+      "pos": [
+        18.573,
+        73.879
+      ],
+      "pos_exact": false,
+      "maps_query": "PNBS Vishrantwadi Pune",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=PNBS+Vishrantwadi+Pune"
+    },
+    {
+      "id": "northeast-05",
+      "area": "northeast",
+      "name": "Naveen Matri Sangha",
+      "locality": "Lohegaon",
+      "note": null,
+      "lat": null,
+      "lng": null,
+      "pos": [
+        18.599,
+        73.927
+      ],
+      "pos_exact": false,
+      "maps_query": "Naveen Matri Sangha Lohegaon Pune",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Naveen+Matri+Sangha+Lohegaon+Pune"
+    },
+    {
+      "id": "northeast-06",
+      "area": "northeast",
+      "name": "BSNR",
+      "locality": "Viman Nagar",
+      "note": null,
+      "lat": null,
+      "lng": null,
+      "pos": [
+        18.5679,
+        73.9143
+      ],
+      "pos_exact": false,
+      "maps_query": "BSNR Viman Nagar Pune",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=BSNR+Viman+Nagar+Pune"
+    },
+    {
+      "id": "northeast-07",
+      "area": "northeast",
+      "name": "North East Sylheti Association",
+      "locality": "Ramwadi",
+      "note": null,
+      "lat": null,
+      "lng": null,
+      "pos": [
+        18.5555,
+        73.908
+      ],
+      "pos_exact": false,
+      "maps_query": "North East Sylheti Association Ramwadi Pune",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=North+East+Sylheti+Association+Ramwadi+Pune"
+    },
+    {
+      "id": "northeast-08",
+      "area": "northeast",
+      "name": "Pristine City Phase 1",
+      "locality": "Bakori",
+      "note": null,
+      "lat": null,
+      "lng": null,
+      "pos": [
+        18.5895,
+        73.9955
+      ],
+      "pos_exact": false,
+      "maps_query": "Pristine City Phase 1 Bakori Pune",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Pristine+City+Phase+1+Bakori+Pune"
+    },
+    {
+      "id": "south-01",
+      "area": "south",
+      "name": "Aadishakti Bangiya Samaj",
+      "locality": "Nanded City",
+      "note": null,
+      "lat": null,
+      "lng": null,
+      "pos": [
+        18.463,
+        73.801
+      ],
+      "pos_exact": false,
+      "maps_query": "Aadishakti Bangiya Samaj Nanded City Pune",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Aadishakti+Bangiya+Samaj+Nanded+City+Pune"
+    },
+    {
+      "id": "south-02",
+      "area": "south",
+      "name": "Kishaloy (KBP)",
+      "locality": "Dhayari",
+      "note": null,
+      "lat": null,
+      "lng": null,
+      "pos": [
+        18.449,
+        73.814
+      ],
+      "pos_exact": false,
+      "maps_query": "Kishaloy (KBP) Dhayari Pune",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Kishaloy+%28KBP%29+Dhayari+Pune"
+    },
+    {
+      "id": "south-03",
+      "area": "south",
+      "name": "Ramakrishna Math",
+      "locality": "Sinhgad Road",
+      "note": null,
+      "lat": null,
+      "lng": null,
+      "pos": [
+        18.49,
+        73.825
+      ],
+      "pos_exact": false,
+      "maps_query": "Ramakrishna Math Sinhgad Road Pune",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Ramakrishna+Math+Sinhgad+Road+Pune"
+    },
+    {
+      "id": "south-04",
+      "area": "south",
+      "name": "Sharada Math",
+      "locality": "Sinhgad Road",
+      "note": null,
+      "lat": null,
+      "lng": null,
+      "pos": [
+        18.49,
+        73.825
+      ],
+      "pos_exact": false,
+      "maps_query": "Sharada Math Sinhgad Road Pune",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Sharada+Math+Sinhgad+Road+Pune"
+    },
+    {
+      "id": "city-01",
+      "area": "city",
+      "name": "Maa Durga Puja Samiti",
+      "locality": "Ganeshkhind Road",
+      "note": null,
+      "lat": null,
+      "lng": null,
+      "pos": [
+        18.538,
+        73.835
+      ],
+      "pos_exact": false,
+      "maps_query": "Maa Durga Puja Samiti Ganeshkhind Road Pune",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Maa+Durga+Puja+Samiti+Ganeshkhind+Road+Pune"
+    },
+    {
+      "id": "city-02",
+      "area": "city",
+      "name": "Shree Maa Anandamayee Ashram",
+      "locality": "Ganeshkhind Road",
+      "note": null,
+      "lat": null,
+      "lng": null,
+      "pos": [
+        18.538,
+        73.835
+      ],
+      "pos_exact": false,
+      "maps_query": "Shree Maa Anandamayee Ashram Ganeshkhind Road Pune",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Shree+Maa+Anandamayee+Ashram+Ganeshkhind+Road+Pune"
+    },
+    {
+      "id": "city-03",
+      "area": "city",
+      "name": "Nandanik, Rohi Villa",
+      "locality": "Koregaon Park",
+      "note": null,
+      "lat": null,
+      "lng": null,
+      "pos": [
+        18.5375,
+        73.893
+      ],
+      "pos_exact": false,
+      "maps_query": "Nandanik, Rohi Villa Koregaon Park Pune",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Nandanik%2C+Rohi+Villa+Koregaon+Park+Pune"
+    },
+    {
+      "id": "city-04",
+      "area": "city",
+      "name": "Aamantran",
+      "locality": "B T Kawde Road",
+      "note": null,
+      "lat": null,
+      "lng": null,
+      "pos": [
+        18.52,
+        73.912
+      ],
+      "pos_exact": false,
+      "maps_query": "Aamantran B T Kawde Road Pune",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Aamantran+B+T+Kawde+Road+Pune"
+    },
+    {
+      "id": "city-05",
+      "area": "city",
+      "name": "Sarvajanin Durga Puja Trust",
+      "locality": "Lonavla",
+      "note": null,
+      "lat": null,
+      "lng": null,
+      "pos": [
+        18.7546,
+        73.4062
+      ],
+      "pos_exact": false,
+      "maps_query": "Sarvajanin Durga Puja Trust Lonavla",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Sarvajanin+Durga+Puja+Trust+Lonavla"
+    },
+    {
+      "id": "southeast-01",
+      "area": "southeast",
+      "name": "PBS Hadapsar",
+      "locality": "Hadapsar",
+      "note": null,
+      "lat": null,
+      "lng": null,
+      "pos": [
+        18.503,
+        73.927
+      ],
+      "pos_exact": false,
+      "maps_query": "PBS Hadapsar Hadapsar Pune",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=PBS+Hadapsar+Hadapsar+Pune"
+    },
+    {
+      "id": "southeast-02",
+      "area": "southeast",
+      "name": "Agomoni (ACA)",
+      "locality": "Magarpatta",
+      "note": null,
+      "lat": null,
+      "lng": null,
+      "pos": [
+        18.5155,
+        73.927
+      ],
+      "pos_exact": false,
+      "maps_query": "Agomoni (ACA) Magarpatta Pune",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Agomoni+%28ACA%29+Magarpatta+Pune"
+    },
+    {
+      "id": "southeast-03",
+      "area": "southeast",
+      "name": "Chitrani",
+      "locality": "Amanora",
+      "note": null,
+      "lat": null,
+      "lng": null,
+      "pos": [
+        18.519,
+        73.937
+      ],
+      "pos_exact": false,
+      "maps_query": "Chitrani Amanora Pune",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Chitrani+Amanora+Pune"
+    },
+    {
+      "id": "southeast-04",
+      "area": "southeast",
+      "name": "Nabankur (NBP)",
+      "locality": "Amanora",
+      "note": "Contact organizer before going",
+      "lat": null,
+      "lng": null,
+      "pos": [
+        18.519,
+        73.937
+      ],
+      "pos_exact": false,
+      "maps_query": "Nabankur (NBP) Amanora Pune",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Nabankur+%28NBP%29+Amanora+Pune"
+    },
+    {
+      "id": "southeast-05",
+      "area": "southeast",
+      "name": "Sarveshwari Durgotsav",
+      "locality": "Magarpatta",
+      "note": null,
+      "lat": null,
+      "lng": null,
+      "pos": [
+        18.5155,
+        73.927
+      ],
+      "pos_exact": false,
+      "maps_query": "Sarveshwari Durgotsav Magarpatta Pune",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Sarveshwari+Durgotsav+Magarpatta+Pune"
+    },
+    {
+      "id": "southeast-06",
+      "area": "southeast",
+      "name": "Magarpatta City Pujo",
+      "locality": "Magarpatta",
+      "note": "Contact organizer before going",
+      "lat": null,
+      "lng": null,
+      "pos": [
+        18.5155,
+        73.927
+      ],
+      "pos_exact": false,
+      "maps_query": "Magarpatta City Pujo Magarpatta Pune",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Magarpatta+City+Pujo+Magarpatta+Pune"
+    },
+    {
+      "id": "southeast-07",
+      "area": "southeast",
+      "name": "KeshavNagar Bengali Association",
+      "locality": "Keshav Nagar",
+      "note": null,
+      "lat": null,
+      "lng": null,
+      "pos": [
+        18.5385,
+        73.93
+      ],
+      "pos_exact": false,
+      "maps_query": "KeshavNagar Bengali Association Keshav Nagar Pune",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=KeshavNagar+Bengali+Association+Keshav+Nagar+Pune"
+    },
+    {
+      "id": "southwest-01",
+      "area": "southwest",
+      "name": "Anandam Association",
+      "locality": "Wanowarie",
+      "note": null,
+      "lat": null,
+      "lng": null,
+      "pos": [
+        18.494,
+        73.899
+      ],
+      "pos_exact": false,
+      "maps_query": "Anandam Association Wanowarie Pune",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Anandam+Association+Wanowarie+Pune"
+    },
+    {
+      "id": "southwest-02",
+      "area": "southwest",
+      "name": "Aikatan Durgoutsav",
+      "locality": "Wanowarie",
+      "note": null,
+      "lat": null,
+      "lng": null,
+      "pos": [
+        18.494,
+        73.899
+      ],
+      "pos_exact": false,
+      "maps_query": "Aikatan Durgoutsav Wanowarie Pune",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Aikatan+Durgoutsav+Wanowarie+Pune"
+    },
+    {
+      "id": "southwest-03",
+      "area": "southwest",
+      "name": "AFMC",
+      "locality": "AFMC",
+      "note": null,
+      "lat": null,
+      "lng": null,
+      "pos": [
+        18.5045,
+        73.8915
+      ],
+      "pos_exact": false,
+      "maps_query": "AFMC Pune",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=AFMC+Pune"
+    },
+    {
+      "id": "southwest-04",
+      "area": "southwest",
+      "name": "Bichkshna",
+      "locality": "NIBM",
+      "note": null,
+      "lat": null,
+      "lng": null,
+      "pos": [
+        18.473,
+        73.901
+      ],
+      "pos_exact": false,
+      "maps_query": "Bichkshna NIBM Pune",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Bichkshna+NIBM+Pune"
+    },
+    {
+      "id": "southwest-05",
+      "area": "southwest",
+      "name": "Aagomani Tribeca",
+      "locality": "NIBM",
+      "note": null,
+      "lat": null,
+      "lng": null,
+      "pos": [
+        18.473,
+        73.901
+      ],
+      "pos_exact": false,
+      "maps_query": "Aagomani Tribeca NIBM Pune",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Aagomani+Tribeca+NIBM+Pune"
+    },
+    {
+      "id": "southwest-06",
+      "area": "southwest",
+      "name": "Bongiya Sanskriti Sangho",
+      "locality": "Handewadi",
+      "note": null,
+      "lat": null,
+      "lng": null,
+      "pos": [
+        18.46,
+        73.929
+      ],
+      "pos_exact": false,
+      "maps_query": "Bongiya Sanskriti Sangho Handewadi Pune",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Bongiya+Sanskriti+Sangho+Handewadi+Pune"
+    },
+    {
+      "id": "southwest-07",
+      "area": "southwest",
+      "name": "Amader Barir Pujo",
+      "locality": "Handewadi",
+      "note": "Contact organizer before going",
+      "lat": null,
+      "lng": null,
+      "pos": [
+        18.46,
+        73.929
+      ],
+      "pos_exact": false,
+      "maps_query": "Amader Barir Pujo Handewadi Pune",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Amader+Barir+Pujo+Handewadi+Pune"
+    },
+    {
+      "id": "southwest-08",
+      "area": "southwest",
+      "name": "Kalpataru Cultural Association",
+      "locality": "Mohammedwadi",
+      "note": null,
+      "lat": null,
+      "lng": null,
+      "pos": [
+        18.476,
+        73.921
+      ],
+      "pos_exact": false,
+      "maps_query": "Kalpataru Cultural Association Mohammedwadi Pune",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Kalpataru+Cultural+Association+Mohammedwadi+Pune"
+    }
+  ]
+}

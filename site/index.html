@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Durga Puja in Pune 2026: every pandal, and the shortest way round</title>
+<meta name="description" content="Every Bengali Durga Puja pandal in Pune and PCMC, grouped by area, with a Google Maps link for each and a route planner that finds the shortest order to visit the ones you pick.">
+<meta property="og:title" content="Pujo in Pune 2026">
+<meta property="og:description" content="Every Durga Puja pandal in Pune and PCMC. Pick the ones you want to see and get the shortest order to visit them.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#D62718">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%AA%94%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;700;800&family=JetBrains+Mono:wght@700;800&display=swap" rel="stylesheet">
+<!-- Bengali wordmark only: text= asks Google for just these four glyphs -->
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@800&text=%E0%A6%AA%E0%A7%81%E0%A6%9C%E0%A7%8B&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+
+<div class="shell">
+  <div class="list-col">
+    <header class="band">
+      <div class="band-in">
+        <h1 class="mark"><span class="bn" lang="bn">পুজো</span><span class="lat">in Pune<br>2026</span></h1>
+        <p class="lede" id="lede">Every Bengali Durga Puja pandal in Pune and PCMC. Pick the ones you want to see and get the shortest order to visit them.</p>
+        <div class="band-acts">
+          <a class="btn btn-light" id="full-map" href="https://maps.app.goo.gl/2wamkrsnqvpAHktt7" target="_blank" rel="noopener">Open full Google Map</a>
+          <a class="btn btn-line" href="#help">Help and contacts</a>
+        </div>
+      </div>
+    </header>
+    <div class="zari" aria-hidden="true"></div>
+    <nav class="chips" aria-label="Filter by area"><div class="scroll" id="chips"></div></nav>
+    <div class="list-in">
+      <div class="search"><input id="q" type="search" placeholder="Search a pandal or locality" aria-label="Search pandals" autocomplete="off"></div>
+      <main id="areas"><noscript><p class="empty">This page needs JavaScript to show the pandal list.</p></noscript></main>
+      <p class="empty" id="empty" hidden>No pandal matches that search. Try a locality, like Baner or Wagholi.</p>
+      <footer id="help">
+        <h2>Help and information</h2>
+        <ul class="contacts" id="contacts"></ul>
+        <p class="credit" id="credit"></p>
+        <p class="credit" id="map-attr"></p>
+      </footer>
+    </div>
+  </div>
+
+  <aside class="side" id="side" aria-label="Map and route">
+    <div class="sheet-head">
+      <h2>Map and route</h2>
+      <button type="button" class="sheet-close" id="close-sheet">Close</button>
+    </div>
+    <div class="map-wrap">
+      <svg class="map" id="map" role="img" aria-label="Map of Pune and PCMC with a pin for each pandal"></svg>
+      <div class="map-ctl">
+        <button type="button" id="zoom-in" aria-label="Zoom in">+</button>
+        <button type="button" id="zoom-out" aria-label="Zoom out">&minus;</button>
+        <button type="button" id="zoom-fit" aria-label="Show all pins in view"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg></button>
+      </div>
+      <div class="pop" id="pop" hidden></div>
+    </div>
+
+    <section class="route" id="route" aria-labelledby="route-title">
+      <div class="route-head">
+        <h2 id="route-title">Your route</h2>
+        <button type="button" class="link" id="clear-route" hidden>Clear</button>
+      </div>
+      <div id="route-empty" class="route-empty">
+        <p id="route-empty-text">Tap + on any pandal, or add a whole area. The shortest order to visit them shows up here and on the map.</p>
+      </div>
+      <div id="route-body" hidden>
+        <div class="opts">
+          <div class="opt">
+            <span class="opt-label" id="start-label">Start from</span>
+            <div class="seg" role="group" aria-labelledby="start-label">
+              <button type="button" data-start="best" aria-pressed="true">Best first pandal</button>
+              <button type="button" data-start="me" aria-pressed="false">My location</button>
+            </div>
+          </div>
+          <div class="opt">
+            <span class="opt-label" id="mode-label">Going by</span>
+            <div class="seg" role="group" aria-labelledby="mode-label">
+              <button type="button" data-mode="drive" aria-pressed="true">Car</button>
+              <button type="button" data-mode="walk" aria-pressed="false">On foot</button>
+            </div>
+          </div>
+          <label class="check"><input type="checkbox" id="back"> Come back to where I started</label>
+        </div>
+        <p class="geo-msg" id="geo-msg" role="status" hidden></p>
+        <p class="summary" id="summary" aria-live="polite"></p>
+        <p class="quality" id="quality"></p>
+        <ol class="stops" id="stops"></ol>
+        <div class="legs-block">
+          <h3>Open in Google Maps</h3>
+          <p class="fine" id="legs-help"></p>
+          <div class="legs" id="legs"></div>
+        </div>
+        <button type="button" class="act" id="share-route"></button>
+        <p class="fine">Pins sit at the centre of each locality, so distances here are estimates. Google Maps looks up each pandal by name when you open a leg.</p>
+      </div>
+    </section>
+  </aside>
+</div>
+
+<button type="button" class="dock" id="dock" aria-controls="side">Map and route<span class="badge" id="dock-count" hidden></span></button>
+
+<script src="assets/app.js" defer></script>
+</body>
+</html>
