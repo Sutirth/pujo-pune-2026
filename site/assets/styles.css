@@ -7,6 +7,7 @@
   --pop:#D62718; --pop-text:#B81F12; --pop-wash:#FFE2DB; --gold:#FFB300; --band:#D62718;
   --note:#8A4B00; --you:#2F6BFF; --focus:#2F6BFF;
   --land:#FFE29A; --dots:rgba(29,19,17,.14); --city:#FFFCF2;
+  --free:#1F8A3E; --free-text:#17702F;
   /* one poster colour per area: chips, locality tags, area stickers and map pins */
   --c-east:#FF8FA3; --c-north:#8DB6FF; --c-central:#FFD047; --c-west:#8EDC7E; --c-northeast:#C3A3FF;
   --c-south:#FFA978; --c-city:#5FDCCB; --c-southeast:#F79BDF; --c-southwest:#C6DB5E;
@@ -27,6 +28,7 @@
     --pop:#E8392A; --pop-text:#FF8A7E; --pop-wash:#3D1712; --gold:#FFB300; --band:#A51D14;
     --note:#FFC24D; --you:#7DA2FF; --focus:#7DA2FF;
     --land:#2A1C10; --dots:rgba(255,226,154,.13); --city:#1D1412;
+    --free:#1F8A3E; --free-text:#7EDB93;
     color-scheme:dark;
   }
 }
@@ -36,6 +38,7 @@
   --pop:#E8392A; --pop-text:#FF8A7E; --pop-wash:#3D1712; --gold:#FFB300; --band:#A51D14;
   --note:#FFC24D; --you:#7DA2FF; --focus:#7DA2FF;
   --land:#2A1C10; --dots:rgba(255,226,154,.13); --city:#1D1412;
+  --free:#1F8A3E; --free-text:#7EDB93;
   color-scheme:dark;
 }
 [data-area="east"], #east { --c:var(--c-east); }
@@ -202,6 +205,61 @@ footer h2 { margin:0 0 10px; font-family:var(--display); font-weight:800; font-s
 .contacts a { color:var(--ink); font-family:var(--mono); font-weight:700; font-size:.9375rem; }
 .credit { margin:16px 0 0; color:var(--muted); font-size:.9rem; max-width:40em; }
 .credit a { color:inherit; }
+
+/* Day picker for puja and anjali times */
+.days { margin-top:18px; }
+.days-label { margin:0 0 8px; font-weight:700; font-size:.9375rem; }
+.days-seg {
+  display:grid; grid-template-columns:repeat(5, minmax(0, 1fr)); gap:4px; padding:4px;
+  border:var(--b) solid var(--line); border-radius:10px; background:var(--paper); box-shadow:3px 3px 0 var(--shadow);
+}
+.days-seg button {
+  min-width:0; border:0; border-radius:7px; padding:8px 2px 7px; background:none; cursor:pointer; color:var(--ink);
+  font-family:var(--mono); font-weight:800; font-size:.6875rem; letter-spacing:.01em; text-transform:uppercase; line-height:1.15;
+}
+.days-seg button small { display:block; margin-top:2px; font-weight:700; font-size:.625rem; letter-spacing:0; text-transform:none; color:var(--muted); }
+.days-seg button:hover { background:var(--canvas); }
+.days-seg button[aria-pressed="true"] { background:var(--ink); color:var(--paper); }
+.days-seg button[aria-pressed="true"] small { color:inherit; opacity:.8; }
+.days .fine { margin-top:8px; }
+
+/* Bhog tag, beside the locality tag */
+.bhog {
+  display:inline-block; vertical-align:top; margin:9px 0 0 6px; padding:3px 7px 2px; border-radius:6px;
+  border:var(--b) solid var(--line); background:var(--paper); color:var(--ink);
+  font-family:var(--mono); font-weight:700; font-size:.6875rem; line-height:1.3; letter-spacing:.03em; text-transform:uppercase;
+}
+.bhog.free { background:var(--free); border-color:var(--fixed-ink); color:#FFFFFF; }
+.bhog.some { color:var(--free-text); border-style:dashed; }
+.bhog.ask { color:var(--muted); border-style:dashed; }
+.pop .bhog { margin:8px 0 0; }
+
+/* The chosen day's times on a card, with all five days behind a tap */
+.when {
+  margin-top:12px; padding:8px 11px 9px; border-radius:8px;
+  border:var(--b) dashed var(--line); background:var(--canvas);
+}
+.card .when { margin-right:-50px; } /* the card keeps 66px on the right for the + button; the box sits below it */
+.when-line { margin:0; }
+.when-day { display:block; font-family:var(--mono); font-weight:800; font-size:.6875rem; letter-spacing:.04em; text-transform:uppercase; color:var(--pop-text); }
+.when-t { display:inline-block; margin:2px 14px 0 0; font-size:.9375rem; color:var(--muted); }
+.when-t b { color:var(--ink); font-weight:800; }
+.when-none { display:block; margin-top:2px; font-size:.875rem; color:var(--muted); }
+.when details { margin-top:4px; }
+.when summary {
+  display:inline-block; padding:4px 0; cursor:pointer; list-style:none;
+  font-family:var(--mono); font-weight:700; font-size:.6875rem; text-transform:uppercase; color:var(--ink);
+  text-decoration:underline; text-decoration-thickness:2px; text-underline-offset:3px;
+}
+.when summary::-webkit-details-marker { display:none; }
+.when summary::after { content:" +"; }
+.when details[open] summary::after { content:" \2212"; }
+.when table { width:100%; margin-top:4px; border-collapse:collapse; font-size:.8125rem; }
+.when th, .when td { padding:5px 6px 5px 0; text-align:left; vertical-align:top; border-top:1px dashed var(--line); }
+.when tr:first-child th { border-top:0; padding-top:2px; font-family:var(--mono); font-size:.625rem; font-weight:700; text-transform:uppercase; color:var(--muted); }
+.when tr th { font-weight:700; white-space:nowrap; }
+.when tr.now th, .when tr.now td { font-weight:800; color:var(--pop-text); }
+.pop .when { margin-top:10px; margin-right:-36px; }
 
 /* Map: city outlines on a halftone ground */
 .map-wrap {

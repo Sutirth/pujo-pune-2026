@@ -2,7 +2,7 @@
 
 A single-page website listing every Bengali Durga Puja pandal in Pune and PCMC, grouped by area, with a Google Maps link for each and a route planner that puts the pandals you pick in the shortest order. It replaces a poster plus one big Google Map with something people can search and tap through on a phone.
 
-- 69 pandals across 9 areas, on a list and an offline SVG map of Pune and PCMC
+- 70 pandals across 9 areas, on a list and an offline SVG map of Pune and PCMC, with puja and anjali times and bhog for each day
 - Route planner: pick pandals one by one or a whole area, get the shortest order, open it in Google Maps leg by leg
 - Map-first on wide screens (the map fills the window, the list sits in a side panel, the route floats on the map), list-first on phones
 - Mobile-first, light and dark themes, in a hand-painted signboard style: Bricolage Grotesque for text, JetBrains Mono for labels and buttons, Baloo Da 2 for the Bengali wordmark. All three are free Google Fonts (SIL Open Font License)
@@ -16,7 +16,8 @@ pune-durga-puja/
   data/
     pandals.csv        source of truth for pandals (edit this)
     localities.csv     approximate centre of each locality, used until a pandal has exact lat/lng
-    meta.json          title, full-map link, contacts, credits
+    meta.json          title, full-map link, contacts, credits, festival days
+    timings.csv        puja and anjali times and bhog per pandal, from the organisers' timings list
   scripts/
     build_data.py      CSVs + meta  ->  site/data/pandals.json
     build_basemap.py   city outlines  ->  site/data/basemap.json (run once; needs shapely)
@@ -82,6 +83,16 @@ Right now each Map button is a Google Maps search for `name locality city`. Well
 
 The poster lists 69 pandals. If the map has 68 pins, one pandal is missing from the map. Find it while matching.
 
+## Puja timings and bhog
+
+`data/timings.csv` holds each puja's times from the organisers' timings list (compiled by Arun Chakraborty (Raja)): bhog, and Puja and Anjali for Shashthi, Saptami, Ashtami and Navami, plus the Sandhi time. Each row is linked to a pandal by its `id` (`east-01`, `southwest-04` and so on: the area id and the pandal's position in that area in `pandals.csv`).
+
+- Write each value as it should show on the site, for example `8:30 AM` or `10:30 AM on 19th`. `NA` or an empty cell means no time is given.
+- Bhog: `Free`, `Paid`, or wording such as `Free on 18th`, `Free for members`, `Contact organiser`.
+- A row with an empty `id` is a puja that is not on the site yet. `build_data.py` reports it and skips it.
+- The festival days and dates are in `data/meta.json` under `days`. The site opens on today's day during the Pujas, and on Shashthi before them.
+- Moving a pandal to a new position in `pandals.csv` changes its id, so update `timings.csv` too. The build stops if a timings row points at an id that does not exist.
+
 ## Deploy (GitHub Pages)
 
 1. Create a GitHub repository and push this folder to the `main` branch.
@@ -108,7 +119,9 @@ Ship phase 1 before Puja starts. Build the rest in order of value during the fes
 
 ## Data and credits
 
-- The list comes from the 2026 poster and Instagram post by Arun Chakraborty (Raja), an initiative by Bengalis in Pune. Contacts for help: Arun (Raja) 9552162105, Keya 8007318880, Nitin 7276927516 (WhatsApp).
+- The list comes from the 2026 poster and Instagram post by Arun Chakraborty (Raja), an initiative by Bengalis in Pune. Puja timings and bhog come from his 2026 timings list, which also added Lonawala – INS Shivaji – Khopoli Sarbajanin Durga Puja Trust. Contacts for help: Arun (Raja) 9552162105, Keya 8007318880, Nitin 7276927516 (WhatsApp).
 - Committee names and localities were transcribed from the poster image. Check spellings, for example `Bichkshna`, against the organisers.
 - This is their compiled data. Get their agreement before launching publicly. The footer already credits them.
+- Design inspired by BLR Cuts, https://blrcuts.com/. Credited in the footer.
+- Feedback and corrections: sutirth.chakravarty@gmail.com (also in the footer).
 - City outlines: Pune and PCMC Municipal Spatial Data by DataMeet India community (CC BY 4.0), https://github.com/datameet/Municipal_Spatial_Data. Credited in the footer.

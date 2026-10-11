@@ -17,5 +17,33 @@
       "name": "Nitin",
       "phone": "7276927516"
     }
-  ]
+  ],
+  "days": [
+    {
+      "id": "shashthi",
+      "name": "Shashthi",
+      "date": "2026-10-16"
+    },
+    {
+      "id": "saptami",
+      "name": "Saptami",
+      "date": "2026-10-17"
+    },
+    {
+      "id": "ashtami",
+      "name": "Ashtami",
+      "date": "2026-10-18"
+    },
+    {
+      "id": "sandhi",
+      "name": "Sandhi",
+      "date": "2026-10-19"
+    },
+    {
+      "id": "navami",
+      "name": "Navami",
+      "date": "2026-10-20"
+    }
+  ],
+  "timings_note": "Times and bhog are from the organisers' list. Confirm with the pandal before you go."
 }

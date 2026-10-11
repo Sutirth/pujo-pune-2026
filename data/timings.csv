@@ -1,0 +1,71 @@
+id,name_in_list,locality_in_list,bhog,shashthi_puja,shashthi_anjali,saptami_puja,saptami_anjali,ashtami_puja,ashtami_anjali,sandhi,navami_puja,navami_anjali
+east-01,Agradoot Bangosamaj,Kharadi,Free,5:55 AM,8:30 AM,8:00 AM,11:30 AM,8:00 AM,11:30 AM,10:28 AM,8:30 AM,10:00 AM
+east-02,Nabo Banga Samaj,Kharadi,Free,8:00 AM,10:00 AM,8:00 AM,11:00 AM,10:00 AM,11:00 AM,7:26 AM,7:00 AM,8:00 AM
+east-03,Jagoron Bengali Association,Kharadi,Paid,9:00 AM,11:00 AM,9:00 AM,10:05 AM,6:00 AM,10:30 AM,7:12 AM,9:05 AM,11:32 AM
+east-12,"Banga Bharti Trust, Kharadi",Kharadi,Free,7:40 AM,NA,5:53 AM,NA,5:53 AM (Saptami),NA,"6:30 AM (Ashtami), 7:26 AM (Sandhi Puja)",8:00 AM,NA
+east-06,Prangan Association,Wagholi,Paid,9:00 AM,10:00 AM,9:00 AM,10:00 AM,8:00 AM,10:00 AM,10:28 AM,9:00 AM,10:00 AM
+east-07,Kashphul Durgotsav,Wagholi,Free on 18th,9:30 AM,11:30 AM,9:30 AM,11:30 AM,9:15 AM,12:05 PM,10:45 AM,8:30 AM,12:00 PM
+east-08,Nabo Bangiya Foundation,Wagholi,Free,7:30 AM,10:30 AM,7:30 AM,10:30 AM,7:30 AM,10:30 AM,7:26 AM,7:30 AM,10:30 AM
+east-09,Anandamela (ABSS),Wagholi,Free,8:30 AM,10:00 AM,8:30 AM,10:00 AM,5:53 AM,9:30 AM,7:26 AM,7:15 AM,9:00 AM
+east-10,Natun Diganta,Wagholi,Free,8:30 AM,10:30 AM,7:30 AM,9:30 AM,7:00 AM,9:00 AM,10:28 AM,8:00 AM,11:00 AM
+east-11,Utkal Banga Sharodiya Durgotsav,Wagholi,Free,NA,10:30 AM,NA,12:00 PM,NA,11:30 AM,7:26 AM,NA,9:00 AM
+northeast-08,Pristine City Phase 1,Bakori,Free,8:00 AM,10:30 AM,8:30 AM,12:00 PM,9:00 AM,12:00 PM,7:26 AM,8:04 AM,10:30 AM
+northeast-01,Jagriti Cultural Foundation,Charholi,Paid,9:00 AM,10:30 AM,8:00 AM,11:30 AM,8:00 AM,10:00 AM,7:26 AM,6:00 AM,7:00 AM
+northeast-02,"SSD, Dhanori",Dhanori,Paid,8:30 AM,10:30 AM,8:00 AM,11:00 AM,8:00 AM,11:00 AM,7:26 AM,7:00 AM,9:30 AM
+northeast-03,Navodaya Cultural Association,Dhanori,Paid,8:00 AM,10:00 AM,8:00 AM,11:00 AM,8:00 AM,11:00 AM,7:26 AM,7:00 AM,8:30 AM
+northeast-04,PNBS,Vishrantwadi,Paid,10:30 AM,Post Pujo,11:30 AM,Post Pujo,10:00 AM,Post Pujo,7:26 AM,9:31 AM,Post Pujo
+northeast-05,Naveen Matri Sangha,Lohegaon,NA,9:00 AM,10:30 AM,9:30 AM,11:00 AM,9:00 AM,11:00 AM,7:26 AM,8:30 AM,11:00 AM
+northeast-06,Bangiya Samsad Nagar Road,Viman Nagar,Free,9:30 AM,NA,8:00 AM,1:00 PM,8:00 AM,10:00 AM,7:26 AM,8:00 AM,10:30 AM
+northeast-07,Ramwadi Sarbojonin,Wadgaonsheri,Free on Navami,8:30 AM,Post Pujo,9:00 AM,12:15 PM,8:30 AM,11:30 AM,7:26 AM,6:30 AM,10:00 AM
+east-04,Banga Bharti,Wadgaon Sheri,Free,8:30 AM,9:30 AM,6:00 AM,9:30 AM,6:00 AM,9:30 AM,7:26 AM,6:00 AM,8:20 AM
+east-05,Abahan,Wadgaon Sheri,Free,9:30 AM,10:30 AM,8:04 AM,10:30 AM,8:04 AM,10:30 AM,7:26 AM,8:04 AM,10:30 AM
+south-01,Aadishakti Bangiya Samaj,Nanded City,Paid,9:30 AM,NA,10:00 AM,11:30 AM,9:30 AM,11:30 AM,7:20 AM,7:30 AM,8:30 AM
+south-02,Kishaloy (KBP),Sinhgad Road,Paid,9:30 AM,10:30 AM,9:30 AM,11:00 AM,9:30 AM,10:30 AM,7:00 AM,8:15 AM,9:00 AM
+south-03,Ramakrishna Math,Sinhgad Road,NA,NA,NA,NA,NA,5:30 AM (Saptami),NA,10:28 AM,5:30 AM,NA
+south-04,Sharada Math,Sinhgad Road,NA,NA,NA,NA,NA,5:30 AM (Saptami),NA,10:28 AM,5:30 AM,NA
+central-01,Poona City Sarbajanin Durga Utsav,Rasta Peth,Free,9:30 AM,10:30 AM,7:30 AM,10:30 AM,7:30 AM,10:30 AM,7:26 AM,7:30 AM,10:30 AM
+central-02,Swarnabhumi Seva Sangha,Somvar Peth,Free,9:30 AM,NA,8:00 AM,9:30 AM,8:00 AM,10:00 AM,7:26 AM,8:00 AM,10:30 AM
+central-03,Bangiya Sanskriti Samsad,Shivaji Nagar,NA,8:30 AM,9:30 AM,8:30 AM,9:30 AM,8:30 AM (Saptami),9:30 AM (Saptami),10:28 AM,8:30 AM,9:30 AM
+central-04,Pune Kalibari,Khadki,Paid,9:00 AM,10:00 AM,8:30 AM,10:00 AM,8:00 AM,10:00 AM,7:26 AM,8:00 AM,9:00 AM
+city-01,Maa Durga Puja Samiti,Ganeshkhind Road,Free on 20th,7:30 AM,10:30 AM,7:30 AM,10:30 AM,7:30 AM,10:30 AM,10:28 AM,7:30 AM,10:30 AM
+city-02,Shree Maa Anandamayee Ashram,Ganeshkhind Road,Free,8:00 AM,9:30 AM,8:30 AM,11:00 AM,7:00 AM,11:00 AM,7:26 AM,5:15 AM,7:45 AM
+city-03,"Nandanik, Rohi Villa",Koregaon Park,Free,8:00 AM,9:00 AM,7:00 AM,10:30 AM,9:00 AM,10:30 AM,7:26 AM,6:45 AM,7:45 AM
+city-04,Aamantran,B T Kawde Road,Free,9:00 AM,NA,8:00 AM,11:30 AM,9:30 AM,11:30 AM,7:26 AM,8:00 AM,11:00 AM
+southeast-01,PBS Hadapsar,Hadapsar,Free,8:30 AM,NA,8:15 AM,12:00 PM,7:30 AM,11:30 AM,7:26 AM,6:00 AM,9:00 AM
+southeast-02,Agomoni (ACA),Magarpatta,Paid,8:30 AM,10:30 AM,6:00 AM,12:30 PM,10:00 AM,1:00 PM,7:26 AM,8:00 AM,12:30 PM
+southeast-03,Chitrani,Amanora,Free,9:30 AM,10:30 AM,8:00 AM,11:00 AM,10:30 AM,11:30 AM,7:26 AM,5:30 AM,10:00 AM
+southeast-04,Nabankur (NBP),Amanora,Paid,10:00 AM,12:30 PM,9:00 AM,12:00 PM,10:00 AM,1:00 PM,7:26 AM,6:30 AM,9:10 AM
+southeast-05,Sarveshwari Durgotsav,Magarpatta,Free,8:30 AM,10:30 AM,8:00 AM,12:30 PM,10:00 AM,1:00 PM,7:26 AM,8:00 AM,12:30 PM
+southeast-06,Magarpatta City Pujo Samiti,Magarpatta,NA,7:00 AM,9:00 AM,8:15 AM,10:10 AM,5:50 AM,10:10 AM,7:26 AM,5:00 AM,6:50 AM
+southeast-07,KeshavNagar Bengali Association,Keshav Nagar,Free on 18th,7:00 AM,9:00 AM,7:04 AM,10:00 AM,7:05 AM,9:05 AM,7:26 AM,7:05 AM,8:00 AM
+southwest-01,Anandam Association,Wanowarie,Paid,9:00 AM,11:30 AM,9:00 AM,11:30 AM,8:00 AM,10:30 AM,10:28 AM,9:00 AM,10:30 AM
+southwest-02,Aikatan Durgoutsav,Wanowarie,Paid,8:30 AM,NA,8:15 AM,12:00 PM,7:30 AM,11:30 AM,7:26 AM,6:00 AM,9:00 AM
+southwest-03,AFMC,AFMC,Free on 18th,9:30 AM,NA,9:00 AM,11:00 AM,8:00 AM,10:30 AM,7:26 AM,7:00 AM,10:00 AM
+southwest-04,Shree Bichkshna Durgotsav,NIBM,Free,9:00 AM,9:30 AM,7:00 AM,11:15 AM,8:00 AM,10:45 AM,7:26 AM,7:00 AM,8:00 AM
+southwest-05,Aagomani Durgotsav,NIBM,Free,10:00 AM,11:00 AM,7:30 AM,11:00 AM,7:30 AM,11:00 AM,7:30 AM,7:30 AM,11:30 AM
+southwest-06,Bongiya Sanskriti Sangho,Handewadi,Free,9:00 AM,10:00 AM,8:30 AM,10:00 AM,8:30 AM,10:00 AM,7:26 AM,8:00 AM,9:00 AM
+southwest-08,Kalpataru Cultural Association,Mohammedwadi,Free,8:00 AM,9:30 AM,8:30 AM,10:00 AM,8:30 AM,10:00 AM,7:20 AM,6:00 AM,8:30 AM
+southwest-07,Amader Barir Puja,Handewadi,Contact organiser,NA,NA,NA,NA,NA,NA,NA,NA,NA
+west-06,Aagomoni Prabasi Sangha,Pashan,Free for members,9:00 AM,NA,9:00 AM,10:30 AM,8:52 AM,10:30 AM,10:27 AM,9:00 AM,10:30 AM
+west-05,Amra Sobai Bangali Sangho,"Sus Road, Pashan",Free for members,8:00 AM,NA,9:00 AM,11:00 AM,6:00 AM (Saptami),8:00 AM (Saptami),"7:26 AM (Sandhi Pujo), 5:00 AM (Ashtami Puja)",7:00 AM,9:00 AM
+west-01,Bengalee Association Pune (BAP),Baner,Paid,9:00 AM,10:30 AM,6:00 AM,11:00 AM,8:00 AM,10:30 AM,7:26 AM,6:30 AM,7:30 AM
+west-02,Paschim Pune Bangiya Parishad,Baner,Paid,5:55 AM,NA,8:00 AM,10:30 AM,8:00 AM,10:00 AM,10:28 AM,8:30 AM,10:00 AM
+west-03,Trikaya Sanskritik Foundation,Baner,Paid,9:30 AM,10:00 AM,8:00 AM,10:30 AM,8:00 AM,10:00 AM,10:28 AM,9:00 AM,10:00 AM
+west-04,Saptapadi (SCSA),Balewadi,Paid,8:00 AM,9:30 AM,10:00 AM,11:00 AM,9:30 AM,11:30 AM,7:26 AM,10:30 AM on 19th,11:30 AM on 19th
+west-07,Sanatan Sanskrutik Trust,Bhukum,Free,7:00 AM,8:00 AM,7:00 AM,8:00 AM,7:00 AM,8:00 AM,10:00 AM,7:00 AM,8:00 AM
+north-01,Oikyotan Bangiya Parishad,Pimple Saudagar,Paid,9:30 AM,10:30 AM,9:30 AM,11:30 AM,9:30 AM,11:30 AM,7:26 AM,7:00 AM,8:15 AM
+north-02,Naboshakti Bongo Sangha,Pimple Saudagar,Paid,8:00 AM,10:00 AM,8:00 AM,12:00 PM,7:00 AM,11:30 AM,7:26 AM,10:00 AM on 19th,12:30 PM on 19th
+north-03,Amader Barir Pujo,Wakad,Paid,9:30 AM,10:30 AM,7:30 AM,10:30 AM,7:30 AM,10:30 AM,7:26 AM,7:30 AM,10:30 AM
+north-04,Bangiya Maitree Parishad,Pimple Gurav,Paid,10:26 AM,12:30 PM,10:26 AM,12:30 PM,10:26 AM,12:30 PM,7:50 AM,10:26 AM on 19th,12:30 PM on 19th
+north-05,Hinjewadi Cultural Arena,Hinjewadi 1,Free on 18th,8:00 AM,10:00 AM,8:00 AM,10:30 AM,8:00 AM,10:00 AM,10:28 AM,8:00 AM,10:00 AM
+north-06,MHCA Phase 3,Hinjewadi 3,Free,7:00 AM,9:30 AM,9:30 AM,12:30 PM,9:30 AM,12:30 PM,7:26 AM,10:30 AM,11:30 AM
+north-07,Bhoirwadi (BSA),Hinjewadi 3,Paid,8:00 AM,10:00 AM,8:00 AM,10:30 AM,8:00 AM,10:30 AM,7:26 AM,9:00 AM,10:00 AM
+north-08,Oitijhyo (OSCA),Hinjewadi 2,Paid,9:00 AM,NA,8:00 AM,9:30 AM,8:00 AM,10:00 AM,7:26 AM,8:00 AM,10:30 AM
+north-09,"BKP, Dehu Road Kalibari",Dehu Road,Free,10:27 AM,12:30 PM,10:26 AM,12:30 PM,10:26 AM,12:30 PM,7:26 AM,10:26 AM,12:30 PM
+north-10,Anandadhara Prabasi Sanstha,Moshi,Free on 17th,8:00 AM,NA,8:14 AM,10:00 AM,6:00 AM (Saptami),8:00 AM (Saptami),7:26 AM Sandhi Puja (Ashtami Puja 5 AM),8:00 AM,10:00 AM
+north-11,Geetanjali Sangho,Akurdi,Free,8:00 AM,NA,9:00 AM,12:00 PM,9:00 AM,11:45 AM,7:26 AM,7:00 AM,8:30 AM
+north-12,Banga Bharati,Pimpri,Free,9:00 AM,10:30 AM,8:30 AM,11:30 AM,8:30 AM,11:30 AM,7:26 AM,6:38 AM,8:00 AM
+north-13,Biswa Bharati Kalimata Mandir,Bhosari,Free,8:00 AM,10:30 AM,8:00 AM,10:30 AM,8:30 AM,10:30 AM,7:26 AM,8:00 AM,10:30 AM
+north-14,Sri Sri Maa Mahishasurmardini Mahamayee Pujo,Bhosari,Free on 20th,9:00 AM,10:30 AM,8:00 AM,11:30 AM,8:00 AM,10:00 AM,7:26 AM,6:00 AM,7:00 AM
+city-05,Sarvajanin Durga Puja Trust,Lonavla,Free,7:30 AM,8:30 AM,9:00 AM,10:30 AM,9:30 AM,11:00 AM,7:26 AM,7:00 AM,9:00 AM
+city-06,Lonawala – INS Shivaji – Khopoli Sarbajanin Durga Puja Trust,Lonavla,Free,8:00 AM,10:00 AM,7:30 AM,11:30 AM,8:30 AM,10:30 AM,"7:26 AM (Sandhi Puja), 4 AM (Ashtami Puja)",8:32 AM,11:30 AM
