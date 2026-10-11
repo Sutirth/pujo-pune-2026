@@ -20,7 +20,7 @@
 
   var data, basemap;
   var byId = {}, areaById = {}, cardEls = {}, sectionEls = {}, chipEls = {}, addAllEls = {};
-  var state = { route: [], start: 'best', back: false, mode: 'drive', area: 'all', q: '', me: null };
+  var state = { route: [], start: 'best', back: false, mode: 'drive', area: 'all', q: '', me: null, day: null };
   var plan = null;
   var lastCleared = null;
 
@@ -317,6 +317,144 @@
     return legs;
   }
 
+  // ---------- puja times and bhog
+
+  var MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  var timeEls = [];   // every element that shows the chosen day, re-filled when the day changes
+
+  function days() { return (data.meta && data.meta.days) || []; }
+  function dayInfo(id) { return days().filter(function (d) { return d.id === id; })[0]; }
+  function shortDate(iso) { var p = iso.split('-'); return +p[2] + ' ' + MONTHS[+p[1] - 1]; }
+  function todayIso() { return new Date(Date.now() + 330 * 60000).toISOString().slice(0, 10); } // India time
+
+  // The festival day for today; before the Pujas the first day, after them the last.
+  function defaultDay() {
+    var list = days(), today = todayIso();
+    if (!list.length) return null;
+    for (var i = 0; i < list.length; i++) if (list[i].date === today) return list[i].id;
+    return today < list[0].date ? list[0].id : list[list.length - 1].id;
+  }
+
+  function bhogInfo(text) {
+    if (!text) return null;
+    var low = text.toLowerCase();
+    if (low === 'free') return { kind: 'free', label: 'Free bhog' };
+    if (low === 'paid') return { kind: 'paid', label: 'Paid bhog' };
+    if (low.indexOf('free ') === 0) return { kind: 'some', label: 'Free bhog ' + text.slice(5) };
+    return { kind: 'ask', label: 'Bhog: ' + text };
+  }
+
+  function bhogTag(p) {
+    var b = bhogInfo(p.bhog);
+    return b ? el('span', 'bhog ' + b.kind, b.label) : null;
+  }
+
+  function timePart(label, value) {
+    var s = el('span', 'when-t', label + ' ');
+    s.appendChild(el('b', null, value || '\u2013'));
+    return s;
+  }
+
+  // One day's times for a pandal, written into box.
+  function fillWhen(box, p) {
+    box.textContent = '';
+    if (!p.has_timings) { box.appendChild(el('span', 'when-none', 'Times not in the organisers\u2019 list yet.')); return; }
+    if (!p.times) { box.appendChild(el('span', 'when-none', 'No times in the list. Contact the organiser.')); return; }
+    var d = dayInfo(state.day);
+    if (!d) return;
+    box.appendChild(el('span', 'when-day', d.name + ' \u00b7 ' + shortDate(d.date)));
+    var e = p.times[d.id];
+    if (!e) box.appendChild(el('span', 'when-none', 'No times given for this day.'));
+    else if (d.id === 'sandhi') box.appendChild(timePart('Sandhi puja', e.sandhi));
+    else { box.appendChild(timePart('Puja', e.puja)); box.appendChild(timePart('Anjali', e.anjali)); }
+  }
+
+  function allDaysTable(p) {
+    var table = el('table'), head = el('tr');
+    ['', 'Puja', 'Anjali'].forEach(function (h) { head.appendChild(el('th', null, h)); });
+    table.appendChild(head);
+    days().forEach(function (d) {
+      var tr = el('tr'), e = p.times[d.id] || {};
+      tr.dataset.day = d.id;
+      tr.appendChild(el('th', null, d.name + ' ' + shortDate(d.date).split(' ')[0]));
+      if (d.id === 'sandhi') {
+        var td = el('td', null, 'Sandhi puja ' + (e.sandhi || '\u2013'));
+        td.colSpan = 2;
+        tr.appendChild(td);
+      } else {
+        tr.appendChild(el('td', null, e.puja || '\u2013'));
+        tr.appendChild(el('td', null, e.anjali || '\u2013'));
+      }
+      table.appendChild(tr);
+    });
+    return table;
+  }
+
+  // The box under a pandal's name: the chosen day's times, and all days behind a tap.
+  function whenBlock(p, withAll) {
+    var wrap = el('div', 'when'), line = el('p', 'when-line');
+    wrap.appendChild(line);
+    fillWhen(line, p);
+    if (!withAll) timeEls = timeEls.filter(function (t) { return t.line.isConnected; }); // the popup is rebuilt often
+    timeEls.push({ line: line, p: p, wrap: wrap });
+    if (withAll && p.times) {
+      var more = el('details'), sum = el('summary', null, 'All 5 days');
+      more.appendChild(sum);
+      more.appendChild(allDaysTable(p));
+      wrap.appendChild(more);
+    }
+    markDay(wrap);
+    return wrap;
+  }
+
+  function markDay(wrap) {
+    wrap.querySelectorAll('tr[data-day]').forEach(function (tr) { tr.classList.toggle('now', tr.dataset.day === state.day); });
+  }
+
+  function renderDays() {
+    var list = days();
+    if (!list.length) return;
+    var box = el('section', 'days');
+    box.setAttribute('aria-labelledby', 'days-label');
+    var label = el('p', 'days-label', 'Puja and anjali times for');
+    label.id = 'days-label';
+    box.appendChild(label);
+    var seg = el('div', 'days-seg');
+    seg.setAttribute('role', 'group');
+    seg.setAttribute('aria-labelledby', 'days-label');
+    var today = todayIso();
+    list.forEach(function (d) {
+      var b = el('button', null, d.name);
+      b.type = 'button';
+      b.dataset.day = d.id;
+      b.appendChild(el('small', null, d.date === today ? 'Today' : shortDate(d.date)));
+      seg.appendChild(b);
+    });
+    seg.addEventListener('click', function (e) {
+      var b = e.target.closest('[data-day]');
+      if (b) setDay(b.dataset.day);
+    });
+    box.appendChild(seg);
+    box.appendChild(el('p', 'fine', (data.meta.timings_note || '') + ' \u2013 means no time is given.'));
+    var search = document.querySelector('.search');
+    search.parentNode.insertBefore(box, search.nextSibling);
+    syncDays();
+  }
+
+  function syncDays() {
+    document.querySelectorAll('.days-seg [data-day]').forEach(function (b) {
+      b.setAttribute('aria-pressed', b.dataset.day === state.day ? 'true' : 'false');
+    });
+  }
+
+  function setDay(id) {
+    if (!dayInfo(id) || id === state.day) return;
+    state.day = id;
+    syncDays();
+    timeEls = timeEls.filter(function (t) { return t.line.isConnected; });
+    timeEls.forEach(function (t) { fillWhen(t.line, t.p); markDay(t.wrap); });
+  }
+
   // ---------- list
 
   function renderChips() {
@@ -351,7 +489,13 @@
 
     card.appendChild(el('h3', null, p.name));
     card.appendChild(el('p', 'loc', p.locality));
+    var bhog = bhogTag(p);
+    if (bhog) {
+      card.appendChild(bhog);
+      card.dataset.q += ' ' + bhog.textContent.toLowerCase();
+    }
     if (p.note) card.appendChild(el('p', 'note', p.note));
+    card.appendChild(whenBlock(p, true));
 
     var acts = el('div', 'acts');
     var maps = withIcon(externalLink(p.maps_url, 'act maps'), ICON.pin, 'Maps');
@@ -402,7 +546,7 @@
       if (t && t.dataset.toggle) return toggleStop(t.dataset.toggle);
       if (t && t.dataset.share) return sharePandal(byId[t.dataset.share]);
       if (t && t.dataset.areaAll) return toggleArea(t.dataset.areaAll);
-      if (e.target.closest('a,button')) return;
+      if (e.target.closest('a,button,summary')) return;
       var card = e.target.closest('.card');
       if (card && DESKTOP.matches) map.focus(card.dataset.id);
     });
@@ -770,11 +914,12 @@
       });
 
       // Pandals that share a locality centre sit on a small ring around it.
-      var groups = {}, keys = [];
+      var groups = {}, keys = [], groupOf = {};
       data.pandals.forEach(function (p) {
         var key = p.pos.join(',');
         if (!groups[key]) { groups[key] = []; keys.push(key); }
         groups[key].push(p);
+        groupOf[p.id] = groups[key];
       });
       keys.forEach(function (key) {
         var members = groups[key], k = members.length, c = project(members[0].pos);
@@ -788,6 +933,7 @@
       });
 
       // Anything far outside the city (Lonavla) is drawn at the edge and labelled off the map.
+      // A group there keeps its ring, so its pins separate when zoomed in like any other group.
       if (core.x0 === Infinity) data.pandals.forEach(function (p) { grow(core, disp[p.id]); });
       var edge = { x0: core.x0 - 1.5, y0: core.y0 - 1.5, x1: core.x1 + 1.5, y1: core.y1 + 1.5 };
       home = { x0: core.x0, y0: core.y0, x1: core.x1, y1: core.y1 };
@@ -795,7 +941,9 @@
         var xy = disp[p.id];
         if (xy[0] < edge.x0 - 6 || xy[0] > edge.x1 + 6 || xy[1] < edge.y0 - 6 || xy[1] > edge.y1 + 6) {
           far[p.id] = true;
-          disp[p.id] = [clamp(xy[0], edge.x0, edge.x1), clamp(xy[1], edge.y0, edge.y1)];
+          var g = groupOf[p.id], c = g.center;
+          g.edge = [clamp(c[0], edge.x0, edge.x1), clamp(c[1], edge.y0, edge.y1)];
+          disp[p.id] = [g.edge[0] + xy[0] - c[0], g.edge[1] + xy[1] - c[1]];
         }
         grow(home, disp[p.id]);
       });
@@ -811,7 +959,7 @@
       });
       keys.forEach(function (key) {
         var g = groups[key], p = g[0];
-        if (far[p.id]) addLabel('far', p.locality + ', off the map', disp[p.id][0], disp[p.id][1]);
+        if (far[p.id]) addLabel('far', p.locality + ', off the map', g.edge[0] + g.ring, g.edge[1]);
         else addLabel('loc', p.locality, g.center[0], g.center[1] + g.ring);
       });
 
@@ -1147,7 +1295,10 @@
       pop.appendChild(el('p', 'pop-area', areaById[p.area].name));
       pop.appendChild(el('h3', null, p.name));
       pop.appendChild(el('p', 'loc', p.locality + (far[id] ? ', off the map' : '')));
+      var bhog = bhogTag(p);
+      if (bhog) pop.appendChild(bhog);
       if (p.note) pop.appendChild(el('p', 'note', p.note));
+      pop.appendChild(whenBlock(p, false));
       var acts = el('div', 'acts'), n = plan ? plan.index[id] || 0 : 0;
       var t = el('button', 'act' + (n ? '' : ' primary'), n ? 'Remove stop ' + n : '+ Add to route');
       t.type = 'button';
@@ -1218,8 +1369,10 @@
         data.areas.length + ' areas. Pick the ones you want to see and get the shortest order to visit them.';
       if (data.meta.full_map_url) $('full-map').href = data.meta.full_map_url;
 
+      state.day = defaultDay();
       restore();
       renderChips();
+      renderDays();
       renderList();
       renderContacts(data.meta);
       map.init();
