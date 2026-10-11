@@ -1788,9 +1788,29 @@
       "pos_exact": false,
       "maps_query": "North East Sylheti Association Ramwadi Pune",
       "maps_url": "https://www.google.com/maps/search/?api=1&query=North+East+Sylheti+Association+Ramwadi+Pune",
-      "bhog": null,
-      "times": null,
-      "has_timings": false
+      "bhog": "Free on Navami",
+      "times": {
+        "shashthi": {
+          "puja": "8:30 AM",
+          "anjali": "Post Pujo"
+        },
+        "saptami": {
+          "puja": "9:00 AM",
+          "anjali": "12:15 PM"
+        },
+        "ashtami": {
+          "puja": "8:30 AM",
+          "anjali": "11:30 AM"
+        },
+        "sandhi": {
+          "sandhi": "7:26 AM"
+        },
+        "navami": {
+          "puja": "6:30 AM",
+          "anjali": "10:00 AM"
+        }
+      },
+      "has_timings": true
     },
     {
       "id": "northeast-08",
