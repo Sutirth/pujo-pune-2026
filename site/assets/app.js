@@ -1292,6 +1292,7 @@
       x.addEventListener('click', closePop);
       pop.appendChild(x);
       pop.dataset.area = p.area;
+      pop.dataset.id = p.id;
       pop.appendChild(el('p', 'pop-area', areaById[p.area].name));
       pop.appendChild(el('h3', null, p.name));
       pop.appendChild(el('p', 'loc', p.locality + (far[id] ? ', off the map' : '')));
@@ -1358,6 +1359,29 @@
     ]).then(function (r) { return { pandals: r[0], basemap: r[1] }; });
   }
 
+  // ---------- analytics
+  // GoatCounter (loaded from index.html) counts page visits on its own. These count a few taps
+  // on top, so the dashboard shows which pandals people open in Maps and how often routes are
+  // used or shared. No cookies and nothing personal is sent. Without GoatCounter this does nothing.
+
+  function track(path, title) {
+    try {
+      if (window.goatcounter && window.goatcounter.count) window.goatcounter.count({ path: path, title: title, event: true });
+    } catch (e) { /* analytics is optional */ }
+  }
+
+  function setupTracking() {
+    document.addEventListener('click', function (e) {
+      var t = e.target.closest('a.maps, .leg-btn, [data-share], #share-route');
+      if (!t) return;
+      var holder = t.closest('.card, .pop'), p = holder && byId[holder.dataset.id];
+      if (t.matches('a.maps') && p) track('maps/' + p.id, 'Maps: ' + p.name);
+      else if (t.matches('.leg-btn')) track('route/leg', 'Route leg opened in Maps');
+      else if (t.matches('[data-share]') && p) track('share/' + p.id, 'Shared: ' + p.name);
+      else if (t.id === 'share-route') track('route/share', 'Route shared');
+    }, true);
+  }
+
   load()
     .then(function (bundle) {
       data = bundle.pandals;
@@ -1378,6 +1402,7 @@
       map.init();
       setupRoutePanel();
       setupSheet();
+      setupTracking();
 
       $('q').addEventListener('input', function () { state.q = this.value; applyFilter(); });
       setArea(state.area, false);

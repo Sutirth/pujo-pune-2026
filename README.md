@@ -93,6 +93,21 @@ The poster lists 69 pandals. If the map has 68 pins, one pandal is missing from 
 - The festival days and dates are in `data/meta.json` under `days`. The site opens on today's day during the Pujas, and on Shashthi before them.
 - Moving a pandal to a new position in `pandals.csv` changes its id, so update `timings.csv` too. The build stops if a timings row points at an id that does not exist.
 
+## Analytics
+
+Visits are counted with [GoatCounter](https://www.goatcounter.com) (free, no cookies, no consent banner needed). The dashboard is at https://pujoinpune.goatcounter.com.
+
+Besides page views, the site records a few taps as events:
+
+| Event | When |
+| --- | --- |
+| `maps/<pandal id>` | someone opens that pandal in Google Maps (titled with the pandal name) |
+| `share/<pandal id>` | someone shares that pandal |
+| `route/leg` | someone opens a route leg in Google Maps |
+| `route/share` | someone shares a route |
+
+The script tag is near the end of `site/index.html`; the tap counting is `setupTracking()` in `app.js` and does nothing if the script is removed.
+
 ## Deploy (GitHub Pages)
 
 1. Create a GitHub repository and push this folder to the `main` branch.
@@ -115,7 +130,7 @@ Ship phase 1 before Puja starts. Build the rest in order of value during the fes
 | 4. Usability | Done: Share button, route planner with picks saved on the device and multi-stop Google Maps legs. Left: favourites separate from the route | |
 | 5. Reliability | Installable offline app (service worker and manifest) | Mobile data is poor near crowded pandals |
 | 6. Community | Correction form feeding a Google Sheet that exports to the CSV | Keeps committees able to fix their own entry |
-| 7. Reach | Bengali and Hindi labels, a short custom domain, privacy-friendly analytics | |
+| 7. Reach | Bengali and Hindi labels, a short custom domain. Done: privacy-friendly analytics (GoatCounter) | |
 
 ## Data and credits
 
