@@ -20,7 +20,7 @@
 
   var data, basemap;
   var byId = {}, areaById = {}, cardEls = {}, sectionEls = {}, chipEls = {}, addAllEls = {};
-  var state = { route: [], start: 'best', back: false, mode: 'drive', area: 'all', q: '', me: null, day: null };
+  var state = { route: [], start: 'best', back: false, mode: 'drive', area: 'all', q: '', me: null, day: null, bhog: 'all' };
   var plan = null;
   var lastCleared = null;
 
@@ -349,6 +349,28 @@
     return b ? el('span', 'bhog ' + b.kind, b.label) : null;
   }
 
+  // "Free on 18th", "Free on Navami": the festival day the bhog is free, or null.
+  function bhogFreeDay(text) {
+    var m = /^free on (.+)$/i.exec(text || '');
+    if (!m) return null;
+    var w = m[1].toLowerCase(), n = parseInt(w, 10);
+    var hit = days().filter(function (d) {
+      return isNaN(n) ? w.indexOf(d.name.toLowerCase()) === 0 : +d.date.split('-')[2] === n;
+    })[0];
+    return hit ? hit.id : null;
+  }
+
+  // Free means free bhog on the chosen day: every-day free, plus "free on <that day>".
+  // Members-only, ask-the-organiser and unknown bhog only show under All.
+  function bhogKind(p) {
+    var b = bhogInfo(p.bhog);
+    if (!b) return null;
+    if (b.kind === 'some') return bhogFreeDay(p.bhog) === state.day ? 'free' : null;
+    return b.kind === 'free' || b.kind === 'paid' ? b.kind : null;
+  }
+
+  function bhogMatches(p) { return state.bhog === 'all' || bhogKind(p) === state.bhog; }
+
   function timePart(label, value) {
     var s = el('span', 'when-t', label + ' ');
     s.appendChild(el('b', null, value || '\u2013'));
@@ -435,10 +457,50 @@
       if (b) setDay(b.dataset.day);
     });
     box.appendChild(seg);
-    box.appendChild(el('p', 'fine', (data.meta.timings_note || '') + ' \u2013 means no time is given.'));
+
+    var row = el('div', 'bhog-filter'), lab = el('span', 'days-label', 'Bhog');
+    lab.id = 'bhog-label';
+    row.appendChild(lab);
+    var bseg = el('div', 'seg bhog-seg');
+    bseg.setAttribute('role', 'group');
+    bseg.setAttribute('aria-labelledby', 'bhog-label');
+    [['all', 'All'], ['free', 'Free'], ['paid', 'Paid']].forEach(function (o) {
+      var b = el('button', null, o[1]);
+      b.type = 'button';
+      b.dataset.bhog = o[0];
+      if (o[0] !== 'all') b.appendChild(el('span', 'n'));
+      bseg.appendChild(b);
+    });
+    bseg.addEventListener('click', function (e) {
+      var b = e.target.closest('[data-bhog]');
+      if (b) setBhog(b.dataset.bhog);
+    });
+    row.appendChild(bseg);
+    box.appendChild(row);
+
+    box.appendChild(el('p', 'fine', (data.meta.timings_note || '') + ' \u2013 means no time is given. Free bhog follows the chosen day.'));
     var search = document.querySelector('.search');
     search.parentNode.insertBefore(box, search.nextSibling);
     syncDays();
+    syncBhog();
+  }
+
+  function syncBhog() {
+    var count = { free: 0, paid: 0 };
+    data.pandals.forEach(function (p) { var k = bhogKind(p); if (count[k] !== undefined) count[k]++; });
+    document.querySelectorAll('.bhog-seg [data-bhog]').forEach(function (b) {
+      var on = b.dataset.bhog === state.bhog;
+      b.setAttribute('aria-pressed', on ? 'true' : 'false');
+      var n = b.querySelector('.n');
+      if (n) n.textContent = ' ' + count[b.dataset.bhog];
+    });
+  }
+
+  function setBhog(kind) {
+    if (kind === state.bhog) return;
+    state.bhog = kind;
+    syncBhog();
+    applyFilter();
   }
 
   function syncDays() {
@@ -453,6 +515,8 @@
     syncDays();
     timeEls = timeEls.filter(function (t) { return t.line.isConnected; });
     timeEls.forEach(function (t) { fillWhen(t.line, t.p); markDay(t.wrap); });
+    syncBhog();
+    if (state.bhog === 'free') applyFilter(); // which pandals have free bhog depends on the day
   }
 
   // ---------- list
@@ -561,10 +625,7 @@
       stop.setAttribute('aria-pressed', n ? 'true' : 'false');
       stop.setAttribute('aria-label', n ? 'Stop ' + n + '. Remove ' + p.name + ' from route' : 'Add ' + p.name + ' to route');
     });
-    data.areas.forEach(function (a) {
-      var ids = idsInArea(a.id), all = ids.every(inRoute);
-      addAllEls[a.id].textContent = all ? 'Remove all ' + ids.length + ' from route' : '+ Add all ' + ids.length + ' to route';
-    });
+    syncAddAll();
   }
 
   function applyFilter() {
@@ -574,15 +635,21 @@
       if (state.area !== 'all' && state.area !== area.id) { section.hidden = true; return; }
       var matches = 0;
       section.querySelectorAll('.card').forEach(function (card) {
-        var show = !term || card.dataset.q.indexOf(term) !== -1;
+        var show = (!term || card.dataset.q.indexOf(term) !== -1) && bhogMatches(byId[card.dataset.id]);
         card.hidden = !show;
         if (show) matches++;
       });
       section.hidden = matches === 0;
       if (matches) any = true;
-      section.querySelector('.count').textContent = term ? matches + ' of ' + section.dataset.total : section.dataset.total;
+      section.querySelector('.count').textContent = term || state.bhog !== 'all' ? matches + ' of ' + section.dataset.total : section.dataset.total;
     });
-    $('empty').hidden = any;
+    var empty = $('empty');
+    if (!empty.dataset.text) empty.dataset.text = empty.textContent;
+    empty.textContent = state.bhog === 'all' ? empty.dataset.text
+      : 'No pandal here has ' + state.bhog + ' bhog' + (state.bhog === 'free' ? ' on ' + dayInfo(state.day).name : '') +
+        (term ? ' and matches that search' : '') + '. Try All, another area or another day.';
+    empty.hidden = any;
+    syncAddAll();
     map.dim(function (id) { return cardEls[id].hidden || cardEls[id].closest('section').hidden; });
   }
 
@@ -631,8 +698,24 @@
     update(true);
   }
 
+  // The area's pandals left after search and the bhog filter (all of them when neither is on).
+  function idsShown(areaId) {
+    return idsInArea(areaId).filter(function (id) { return !cardEls[id].hidden; });
+  }
+
+  function filtering() { return !!state.q.trim() || state.bhog !== 'all'; }
+
+  function syncAddAll() {
+    data.areas.forEach(function (a) {
+      var ids = idsShown(a.id), all = ids.length && ids.every(inRoute), n = ids.length;
+      addAllEls[a.id].textContent = filtering()
+        ? (all ? 'Remove these ' + n + ' from route' : '+ Add these ' + n + ' to route')
+        : (all ? 'Remove all ' + n + ' from route' : '+ Add all ' + n + ' to route');
+    });
+  }
+
   function toggleArea(areaId) {
-    var ids = idsInArea(areaId);
+    var ids = idsShown(areaId);
     if (ids.every(inRoute)) state.route = state.route.filter(function (x) { return ids.indexOf(x) === -1; });
     else ids.forEach(function (id) { if (!inRoute(id)) state.route.push(id); });
     lastCleared = null;

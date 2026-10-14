@@ -91,6 +91,7 @@ The poster lists 69 pandals. If the map has 68 pins, one pandal is missing from 
 - Bhog: `Free`, `Paid`, or wording such as `Free on 18th`, `Free for members`, `Contact organiser`.
 - A row with an empty `id` is a puja that is not on the site yet. `build_data.py` reports it and skips it.
 - The festival days and dates are in `data/meta.json` under `days`. The site opens on today's day during the Pujas, and on Shashthi before them.
+- The Bhog filter (All / Free / Paid) sits under the day picker. Free follows the chosen day: a pandal marked `Free on 18th` counts as free on Ashtami only. `Free for members`, `Contact organiser` and unknown bhog show under All only. With a filter or search on, an area's "Add" button adds just the pandals showing.
 - Moving a pandal to a new position in `pandals.csv` changes its id, so update `timings.csv` too. The build stops if a timings row points at an id that does not exist.
 
 ## Analytics
