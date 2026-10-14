@@ -221,6 +221,9 @@ footer h2 { margin:0 0 10px; font-family:var(--display); font-weight:800; font-s
 .days-seg button:hover { background:var(--canvas); }
 .days-seg button[aria-pressed="true"] { background:var(--ink); color:var(--paper); }
 .days-seg button[aria-pressed="true"] small { color:inherit; opacity:.8; }
+.bhog-filter { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:8px 12px; margin-top:14px; }
+.bhog-filter .days-label { margin:0; }
+.bhog-seg button .n { font-weight:700; opacity:.7; }
 .days .fine { margin-top:8px; }
 
 /* Bhog tag, beside the locality tag */
